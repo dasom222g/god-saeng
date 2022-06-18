@@ -4,7 +4,6 @@ import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from 'react-i18next'
 import { languages, Languages, initLanguage } from '../../lang/i18n'
 
-
 const Header: FC = () => {
   const { t, i18n } = useTranslation()
   const [lang, setLang] = useState<Languages>(
@@ -18,9 +17,7 @@ const Header: FC = () => {
 
   return (
     <div>
-      <div>
-        { t('donation') }
-      </div>
+      <div>{t('donation')}</div>
       <button
         type="button"
         className="font-bold text-lg flex items-center"
