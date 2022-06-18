@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Skeleton from '@mui/material/Skeleton'
 
-const CardLoading: FC = () => {
+const LoadingFallback: FC = () => {
   return (
     <div className="px-4 py-2">
       <div className="py-2">
@@ -21,4 +21,4 @@ const CardLoading: FC = () => {
   )
 }
 
-export default CardLoading
+export default LoadingFallback
