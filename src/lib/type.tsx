@@ -58,8 +58,12 @@ interface AnswerType {
 export interface MBTIQuestionType {
   id: number
   code: number
-  questionCode: number
   qustionType: IndicatorType
   questionText: string
+}
+export interface MBTIAnswerType {
+  id: number
+  questionCode: number
+  qustionType: IndicatorType
   answer: AnswerType[]
 }
