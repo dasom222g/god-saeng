@@ -14,7 +14,7 @@ const Home: FC = () => {
         <img src="./images/god2.png" alt="가보자고" />
       </div>
       <div className="text-center bg-yellow-800 rounded-xl">
-        <Link to="/step" className="text-white px-6 py-2 inline-flex items-center justify-center">
+        <Link to="/step?page=1" className="text-white px-6 py-2 inline-flex items-center justify-center">
           <IoIosArrowForward size="16" className="inline-block" />
           <span className="inline-block px-2">갓생 유형 알아보러 가기</span>
         </Link>
