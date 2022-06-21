@@ -14,8 +14,8 @@ export interface WalletClassType {
 const indicators = {
   ei: 'EI',
   ns: 'NS',
-  ft: 'FT',
-  jp: 'JP',
+  ft: 'TF',
+  jp: 'PJ',
 } as const
 
 const categorys = {
@@ -23,10 +23,10 @@ const categorys = {
   i: 'I',
   n: 'N',
   s: 'S',
-  f: 'F',
   t: 'T',
-  j: 'J',
+  f: 'F',
   p: 'P',
+  j: 'J',
 } as const
 
 const toastSeverity = {
@@ -45,12 +45,12 @@ export type ErrorType = {
   link?: string
 }
 
-type IndicatorType = typeof indicators[keyof typeof indicators] // 'EI' | 'NS' | 'FT' | 'JP'
+type IndicatorType = typeof indicators[keyof typeof indicators] // 'EI' | 'NS' | 'TF' | 'PJ'
 
 type CategoryType = typeof categorys[keyof typeof categorys] // 'E' | 'I' | 'N' | 'S' ...
 
 interface AnswerType {
-  code: Number
+  code: number
   type: CategoryType
   text: string
 }
@@ -58,12 +58,14 @@ interface AnswerType {
 export interface MBTIQuestionType {
   id: number
   code: number
+  nextCode: number
   qustionType: IndicatorType
   questionText: string
 }
 export interface MBTIAnswerType {
   id: number
   questionCode: number
+  questionNextCode: number
   qustionType: IndicatorType
-  answer: AnswerType[]
+  answerList: AnswerType[]
 }
