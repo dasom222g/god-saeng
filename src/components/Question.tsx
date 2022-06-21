@@ -1,12 +1,17 @@
 import React, { FC } from 'react'
+import { MBTIQuestionType } from '../lib/type'
 
-// interface QuestionProp {
-//   qustionData: MBTIQuestionType[]
-// }
+interface QuestionProp {
+  qustionData: MBTIQuestionType
+}
 
-const Question:FC = () => {
+const Question: FC<QuestionProp> = ({ qustionData }) => {
+  const { id, questionText } = qustionData
   return (
-    <div>Question</div>
+    <>
+      <h3>Question {id}</h3>
+      <p>{questionText}</p>
+    </>
   )
 }
 
