@@ -16,7 +16,7 @@ const Header: FC = () => {
   // }
 
   return (
-    <div className="flex justify-center pt-8 pb-4">
+    <div className="flex justify-center py-8">
       <div className="w-3/5 max-w-xs">
         <img src="./images/logo.png" alt="logo" />
       </div>
