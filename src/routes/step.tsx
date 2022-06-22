@@ -20,7 +20,7 @@ const Step: FC = () => {
   })
   // view
   return (
-    <div className="-mb-4 md:-mb-6">
+    <div className="h-full flex flex-col justify-between py-12">
       <Question qustionData={question} />
       <Answer answer={answer} />
     </div>
