@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { Link } from 'react-router-dom'
 import { MBTIAnswerType } from '../lib/type'
 
 interface AnswerProp {
@@ -8,13 +9,15 @@ interface AnswerProp {
 const Answer: FC<AnswerProp> = ({ answer }) => {
   const { answerList } = answer
   return (
-    <>
+    <div>
       {answerList.map((item) => (
-        <div className="py-4" key={item.code}>
-          <span className="block px-4 py-4 bg-white rounded-xl">{item.text}</span>
+        <div className="py-2" key={item.code}>
+          <Link to={`/step?page=${answer.questionNextCode}`}>
+            <span className="block px-4 py-4 bg-white rounded-xl">{item.text}</span>
+          </Link>
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

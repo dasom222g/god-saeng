@@ -9,8 +9,8 @@ const Question: FC<QuestionProp> = ({ qustionData }) => {
   const { id, questionText } = qustionData
   return (
     <>
-      <h3>Question {id}</h3>
-      <p>{questionText}</p>
+      <h3 className="text-3xl font-bold text-center py-2">Question {id}</h3>
+      <p className="text-center py-1">{questionText}</p>
     </>
   )
 }
