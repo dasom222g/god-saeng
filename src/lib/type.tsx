@@ -69,3 +69,11 @@ export interface MBTIAnswerType {
   qustionType: IndicatorType
   answerList: AnswerType[]
 }
+
+type PartialRecord<K extends string | number | symbol, T> = { [P in K]?: T }
+
+export interface ResultType {
+  qustionType: IndicatorType
+  questionCodes: number[]
+  resultValue: PartialRecord<CategoryType, number>
+}
