@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSetRecoilState } from 'recoil'
 import { MBTIAnswerType } from '../lib/type'
+import { resultState } from '../state/dataState'
 
 interface AnswerProp {
   answer: MBTIAnswerType
@@ -10,8 +12,11 @@ const Answer: FC<AnswerProp> = ({ answer }) => {
   const navigate = useNavigate()
   const { answerList } = answer
 
+  const setResult = useSetRecoilState(resultState)
+
   const handleSelect = (): void => {
-    navigate(`/step?page=${answer.questionNextCode}`)
+    setResult('abc')
+    navigate(answer.questionNextCode ? `/step?page=${answer.questionNextCode}` : '/result')
     // navigate('/result')
   }
 
