@@ -10,7 +10,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 1,
     nextCode: 2,
     qustionType: 'EI',
-    questionText: '오랜만에 친구들과의 약속이 잡혀 주말에 친구들을 만나러 가고있다. 약속장소의 분위기는?',
+    questionText: '일할때 나의 능률은?',
   },
   {
     id: 2,
@@ -101,12 +101,12 @@ export const mbtiAnswer: MBTIAnswerType[] = [
       {
         code: 0,
         type: 'E',
-        text: '사람들이 함께 모여 왁자지껄한 자리도 신난다. 사람이 많을수록 분위기가 더 화기애애한 건 사실이다.',
+        text: '신속 정확하게!',
       },
       {
         code: 1,
         type: 'I',
-        text: '일대일 대화를 더 선호한다. 여럿이 모여도 파장 때 내 옆에 남는 건 결국 한 사람이다.',
+        text: '충분한 여유를 가지고~',
       },
     ],
   },
