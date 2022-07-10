@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { Link } from 'react-router-dom'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 // import { useTranslation } from 'react-i18next'
@@ -16,9 +17,11 @@ const Header: FC = () => {
   // }
 
   return (
-    <div className="flex justify-center py-8">
-      <div className="w-3/5 max-w-xs">
-        <img src="./images/logo.png" alt="logo" />
+    <div className="flex justify-center py-6">
+      <div className="w-4/6 max-w-xs">
+        <Link to="/">
+          <img src="./images/logo.png" alt="logo" />
+        </Link>
       </div>
       {/* <button
         type="button"
