@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import Answer from '../components/Answer'
+import Progress from '../components/Progress'
 import Question from '../components/Question'
 import { mbtiAnswer, mbtiQuestion } from '../data/response'
 
@@ -21,6 +22,7 @@ const Step: FC = () => {
   // view
   return (
     <div className="h-full flex flex-col justify-between py-12">
+      <Progress total={mbtiQuestion.length} current={Number(page)} />
       <Question qustionData={question} />
       <Answer answer={answer} />
     </div>
