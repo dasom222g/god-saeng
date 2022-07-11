@@ -21,7 +21,7 @@ module.exports = {
         'god-light-brown': '#AFAB99',
         'god-light-orange': '#FFCA8D',
         'god-coral': '#F98E71',
-        'god-light-coral': '#FFC5A6',
+        'god-light-coral': '#FECCBE',
         'god-purple': '#FF90DF',
         'god-gray': '#4A4737',
         'god-red': '#ED3B38',
