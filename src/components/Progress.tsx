@@ -15,7 +15,7 @@ const Progress: FC<ProgressProp> = ({ total, current }) => {
         {/* <ImFire size={30} className="absolute top-1/2 transform  -translate-y-1/2 text-god-red" /> */}
         <div
           className="transition-all"
-          style={{ transform: `translateX(calc(${coordinate}% - 20px))` }}>
+          style={{ transform: `translateX(calc(${coordinate}% - 16px))` }}>
           <img
             src="./images/progress.png"
             className="w-9 absolute top-1/2 transform -translate-y-1/2"
@@ -24,7 +24,7 @@ const Progress: FC<ProgressProp> = ({ total, current }) => {
         </div>
         <div className="block w-full h-full rounded-xl overflow-hidden">
           <span
-            className="block h-full bg-god-light-coral"
+            className="block h-full bg-god-light-mint"
             style={{ width: `${coordinate}%` }}></span>
         </div>
       </div>
