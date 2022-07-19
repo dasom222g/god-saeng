@@ -49,7 +49,7 @@ type IndicatorType = typeof indicators[keyof typeof indicators] // 'EI' | 'NS' |
 
 type CategoryType = typeof categorys[keyof typeof categorys] // 'E' | 'I' | 'N' | 'S' ...
 
-interface AnswerType {
+export interface AnswerType {
   code: number
   type: CategoryType
   text: string
