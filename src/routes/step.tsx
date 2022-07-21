@@ -27,6 +27,16 @@ const Step: FC = () => {
     console.log('비교', question.qustionType[0] === selectedItem.type)
 
     setResult('item')
+    // const r = [
+    //   {
+    //     type: 'EI',
+    //     value: 1
+    //   },
+    //   {
+    //     type: 'TF',
+    //     value: 0
+    //   },
+    // ]
   }
 
   // view
