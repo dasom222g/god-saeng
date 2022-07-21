@@ -29,11 +29,15 @@ const Step: FC = () => {
     setResult('item')
     // const r = [
     //   {
-    //     type: 'EI',
+    //     qustionType: 'EI',
+    //     firstType: 'E',
+    //     lastType: 'I',
     //     value: 1
     //   },
     //   {
-    //     type: 'TF',
+    //     qustionType: 'TF',
+    //     firstType: 'T',
+    //     lastType: 'F',
     //     value: 0
     //   },
     // ]
