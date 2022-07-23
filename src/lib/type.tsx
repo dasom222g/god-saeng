@@ -47,7 +47,7 @@ export type ErrorType = {
 
 type IndicatorType = typeof indicators[keyof typeof indicators] // 'EI' | 'NS' | 'TF' | 'PJ'
 
-type CategoryType = typeof categorys[keyof typeof categorys] // 'E' | 'I' | 'N' | 'S' ...
+export type CategoryType = typeof categorys[keyof typeof categorys] // 'E' | 'I' | 'N' | 'S' ...
 
 export interface AnswerType {
   code: number
@@ -60,6 +60,8 @@ export interface MBTIQuestionType {
   code: number
   nextCode: number
   qustionType: IndicatorType
+  firstType: CategoryType
+  lastType: CategoryType
   questionText: string
 }
 export interface MBTIAnswerType {
@@ -70,7 +72,7 @@ export interface MBTIAnswerType {
   answerList: AnswerType[]
 }
 
-// type PartialRecord<K extends string | number | symbol, T> = { [P in K]?: T }
+type PartialRecord<K extends string | number | symbol, T> = { [P in K]?: T }
 
 // export interface ResultType {
 //   qustionType: IndicatorType
@@ -79,7 +81,7 @@ export interface MBTIAnswerType {
 // }
 export interface ResultType {
   qustionType: IndicatorType
-  firstType: CategoryType,
-  lastType: CategoryType,
-  value: number
+  firstType: CategoryType
+  lastType: CategoryType
+  resultValue: PartialRecord<CategoryType, number>
 }

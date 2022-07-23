@@ -10,6 +10,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 1,
     nextCode: 2,
     qustionType: 'EI',
+    firstType: 'E',
+    lastType: 'I',
     questionText: '일할때 나의 능률은?',
   },
   {
@@ -17,6 +19,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 2,
     nextCode: 3,
     qustionType: 'TF',
+    firstType: 'T',
+    lastType: 'F',
     questionText: '난 이 사람의 천재성이 더 탐난다. 나에게 하나가 주어진다면 그의 재능을 택하겠다.',
   },
   {
@@ -24,6 +28,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 3,
     nextCode: 4,
     qustionType: 'PJ',
+    firstType: 'P',
+    lastType: 'J',
     questionText: '내가 바라는 미래의 내 모습은 이렇다.',
   },
   {
@@ -31,6 +37,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 4,
     nextCode: 5,
     qustionType: 'NS',
+    firstType: 'N',
+    lastType: 'S',
     questionText: '둘 중 나는 성향은?',
   },
   {
@@ -38,6 +46,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 5,
     nextCode: 6,
     qustionType: 'EI',
+    firstType: 'E',
+    lastType: 'I',
     questionText: '나에게 더 자주 일어나는 일은?',
   },
   {
@@ -45,6 +55,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 6,
     nextCode: 7,
     qustionType: 'TF',
+    firstType: 'T',
+    lastType: 'F',
     questionText: '갈등 및 분쟁을 해결하고자 할 때, 나는 주로',
   },
   {
@@ -52,6 +64,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 7,
     nextCode: 8,
     qustionType: 'PJ',
+    firstType: 'P',
+    lastType: 'J',
     questionText: '생전 처음 해 보는 새로운 메뉴를 요리할 때 나의 모습은?',
   },
   {
@@ -59,6 +73,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 8,
     nextCode: 9,
     qustionType: 'NS',
+    firstType: 'N',
+    lastType: 'S',
     questionText: '누군가가 자신이 생각해 낸 아이디어라며 이를 소개할 때, 나는',
   },
   {
@@ -66,6 +82,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 9,
     nextCode: 10,
     qustionType: 'TF',
+    firstType: 'T',
+    lastType: 'F',
     questionText: '나는 둘 중 이렇게 생각한다.',
   },
   {
@@ -73,6 +91,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 10,
     nextCode: 11,
     qustionType: 'PJ',
+    firstType: 'P',
+    lastType: 'J',
     questionText: '새로운 사람들을 만났을 때,',
   },
   {
@@ -80,6 +100,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 11,
     nextCode: 12,
     qustionType: 'NS',
+    firstType: 'N',
+    lastType: 'S',
     questionText: '나는 상대방과 대화할 때,',
   },
   {
@@ -87,6 +109,8 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 12,
     nextCode: 0,
     qustionType: 'EI',
+    firstType: 'E',
+    lastType: 'I',
     questionText: '월요일 아침부터 회의가 잡혔다.ㅠㅠ 호의 할 때, 당신의 모습은?',
   },
 ]
