@@ -1,6 +1,13 @@
 import { atom } from 'recoil'
+import { ResultType } from '../lib/type'
 
-export const resultState = atom<string>({
+export const resultState = atom<ResultType[]>({
   key: 'resultState',
-  default: 'Hello world',
+  default: [],
 })
+
+export const resultMbtiState = atom<string>({
+  key: 'resultMbtiState',
+  default: 'ENTJ',
+})
+
