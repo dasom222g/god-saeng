@@ -1,11 +1,11 @@
 import React, { FC, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
-import { useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 import Answer from '../components/Answer'
 import Progress from '../components/Progress'
 import Question from '../components/Question'
 import { mbtiAnswer, mbtiQuestion } from '../data/response'
-import { AnswerType } from '../lib/type'
+import { AnswerType, CategoryType, ResultType } from '../lib/type'
 import { resultState } from '../state/dataState'
 
 const useQuery = (): URLSearchParams => {
@@ -18,27 +18,49 @@ const Step: FC = () => {
   const question = mbtiQuestion[Number(page) - 1]
   const answer = mbtiAnswer[Number(page) - 1]
 
-  const setResult = useSetRecoilState(resultState)
+  const [result] = useRecoilState(resultState)
+
+  const addItem = (targetItem: ResultType, selectedType: CategoryType): ResultType => {
+    return {
+      ...targetItem,
+      resultValue: {
+        [question.firstType]: selectedType === question.firstType ? targetItem.resultValue[question.firstType] : targetItem.resultValue[question.firstType],
+      },
+    }
+  }
 
   const selectAnswer = (selectedItem: AnswerType): void => {
-    question.qustionType[0] === selectedItem.type
-    console.log('question', question)
-    console.log('selectedItem', selectedItem)
-    console.log('비교', question.qustionType[0] === selectedItem.type)
+    const initialData: ResultType = {
+      qustionType: question.qustionType,
+      firstType: question.firstType,
+      lastType: question.lastType,
+      resultValue: {
+        [question.firstType]: selectedItem.type === question.firstType ? 1 : 0,
+      },
+    }
+    console.log('initialData', initialData)
+    const realData: ResultType[] = !result.length
+      ? [...result, initialData]
+      : result.map((item) => (item.qustionType === question.qustionType ? addItem(item, selectedItem.type) : initialData))
 
-    setResult('item')
+    console.log('realData', realData)
+
     // const r = [
     //   {
     //     qustionType: 'EI',
     //     firstType: 'E',
     //     lastType: 'I',
-    //     value: 1
+    //     resultValue: {
+    //       E: 1
+    //     }
     //   },
     //   {
     //     qustionType: 'TF',
     //     firstType: 'T',
     //     lastType: 'F',
-    //     value: 0
+    //     resultValue: {
+    //       T: 1
+    //     }
     //   },
     // ]
   }
