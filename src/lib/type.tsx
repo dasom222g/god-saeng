@@ -45,7 +45,7 @@ export type ErrorType = {
   link?: string
 }
 
-type IndicatorType = typeof indicators[keyof typeof indicators] // 'EI' | 'NS' | 'TF' | 'PJ'
+export type IndicatorType = typeof indicators[keyof typeof indicators] // 'EI' | 'NS' | 'TF' | 'PJ'
 
 export type CategoryType = typeof categorys[keyof typeof categorys] // 'E' | 'I' | 'N' | 'S' ...
 
@@ -72,7 +72,7 @@ export interface MBTIAnswerType {
   answerList: AnswerType[]
 }
 
-type PartialRecord<K extends string | number | symbol, T> = { [P in K]?: T }
+type PartialRecord<K extends string | number, T> = { [P in K]?: T }
 
 // export interface ResultType {
 //   qustionType: IndicatorType

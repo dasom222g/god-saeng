@@ -1,19 +1,18 @@
 import React, { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { MBTIAnswerType, AnswerType } from '../lib/type'
+import { MBTIAnswerType, AnswerType, IndicatorType } from '../lib/type'
 
 interface AnswerProp {
   answer: MBTIAnswerType
-  selectAnswer: (selectedItem: AnswerType) => void
+  selectAnswer: (selectedItem: AnswerType, qustionType: IndicatorType) => void
 }
 
 const Answer: FC<AnswerProp> = ({ answer, selectAnswer }) => {
   const navigate = useNavigate()
   const { answerList } = answer
 
-
   const handleSelect = (selectedItem: AnswerType): void => {
-    selectAnswer(selectedItem)
+    selectAnswer(selectedItem, answer.qustionType)
     navigate(answer.questionNextCode ? `/step?page=${answer.questionNextCode}` : '/result')
     // navigate('/result')
   }
