@@ -1,11 +1,11 @@
-import React, { FC, useMemo } from 'react'
+import React, { FC, useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import Answer from '../components/Answer'
 import Progress from '../components/Progress'
 import Question from '../components/Question'
 import { mbtiAnswer, mbtiQuestion } from '../data/response'
-import { AnswerType, CategoryType, ResultType } from '../lib/type'
+import { AnswerType, CategoryType, IndicatorType, ResultType } from '../lib/type'
 import { resultState } from '../state/dataState'
 
 const useQuery = (): URLSearchParams => {
@@ -18,18 +18,29 @@ const Step: FC = () => {
   const question = mbtiQuestion[Number(page) - 1]
   const answer = mbtiAnswer[Number(page) - 1]
 
-  const [result] = useRecoilState(resultState)
+  const [result, setResult] = useRecoilState(resultState)
 
-  const addItem = (targetItem: ResultType, selectedType: CategoryType): ResultType => {
-    return {
-      ...targetItem,
-      resultValue: {
-        [question.firstType]: selectedType === question.firstType ? targetItem.resultValue[question.firstType] : targetItem.resultValue[question.firstType],
-      },
-    }
+  const accResultData = (targetItem: ResultType, selectedType: CategoryType): ResultType[] => {
+    const resultData = result.map((item) => {
+      if (item.qustionType === targetItem.qustionType) {
+        const value = targetItem.resultValue[question.firstType]
+        return {
+          ...item,
+          resultValue: {
+            [question.firstType]:
+              targetItem.firstType === selectedType
+                ? (value as number) + 1
+                : targetItem.resultValue[question.firstType],
+          },
+        }
+      }
+      return item
+    })
+    console.log('resultData', resultData, 'selectedType', selectedType)
+    return resultData
   }
 
-  const selectAnswer = (selectedItem: AnswerType): void => {
+  const selectAnswer = (selectedItem: AnswerType, questionType: IndicatorType): void => {
     const initialData: ResultType = {
       qustionType: question.qustionType,
       firstType: question.firstType,
@@ -38,32 +49,18 @@ const Step: FC = () => {
         [question.firstType]: selectedItem.type === question.firstType ? 1 : 0,
       },
     }
-    console.log('initialData', initialData)
-    const realData: ResultType[] = !result.length
-      ? [...result, initialData]
-      : result.map((item) => (item.qustionType === question.qustionType ? addItem(item, selectedItem.type) : initialData))
-
+    console.log('result!!', result.length)
+    const isExistItem = result.find((item) => item.qustionType === questionType)
+    const realData = isExistItem
+      ? accResultData(isExistItem, selectedItem.type)
+      : [...result, initialData]
     console.log('realData', realData)
-
-    // const r = [
-    //   {
-    //     qustionType: 'EI',
-    //     firstType: 'E',
-    //     lastType: 'I',
-    //     resultValue: {
-    //       E: 1
-    //     }
-    //   },
-    //   {
-    //     qustionType: 'TF',
-    //     firstType: 'T',
-    //     lastType: 'F',
-    //     resultValue: {
-    //       T: 1
-    //     }
-    //   },
-    // ]
+    setResult(realData)
   }
+
+  useEffect(() => {
+    console.log('result', result)
+  }, [result])
 
   // view
   return (
