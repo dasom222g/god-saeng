@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo } from 'react'
+import React, { FC, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import Answer from '../components/Answer'
@@ -36,31 +36,25 @@ const Step: FC = () => {
       }
       return item
     })
-    console.log('resultData', resultData, 'selectedType', selectedType)
     return resultData
   }
 
   const selectAnswer = (selectedItem: AnswerType, questionType: IndicatorType): void => {
     const initialData: ResultType = {
       qustionType: question.qustionType,
+      qustionCode: question.qustionCode,
       firstType: question.firstType,
       lastType: question.lastType,
       resultValue: {
         [question.firstType]: selectedItem.type === question.firstType ? 1 : 0,
       },
     }
-    console.log('result!!', result.length)
     const isExistItem = result.find((item) => item.qustionType === questionType)
     const realData = isExistItem
       ? accResultData(isExistItem, selectedItem.type)
       : [...result, initialData]
-    console.log('realData', realData)
     setResult(realData)
   }
-
-  useEffect(() => {
-    console.log('result', result)
-  }, [result])
 
   // view
   return (
