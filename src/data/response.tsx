@@ -10,6 +10,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 1,
     nextCode: 2,
     qustionType: 'EI',
+    qustionCode: 1,
     firstType: 'E',
     lastType: 'I',
     questionText: '일할때 나의 능률은?',
@@ -19,6 +20,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 2,
     nextCode: 3,
     qustionType: 'TF',
+    qustionCode: 3,
     firstType: 'T',
     lastType: 'F',
     questionText: '난 이 사람의 천재성이 더 탐난다. 나에게 하나가 주어진다면 그의 재능을 택하겠다.',
@@ -28,6 +30,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 3,
     nextCode: 4,
     qustionType: 'PJ',
+    qustionCode: 4,
     firstType: 'P',
     lastType: 'J',
     questionText: '내가 바라는 미래의 내 모습은 이렇다.',
@@ -37,6 +40,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 4,
     nextCode: 5,
     qustionType: 'NS',
+    qustionCode: 2,
     firstType: 'N',
     lastType: 'S',
     questionText: '둘 중 나는 성향은?',
@@ -46,6 +50,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 5,
     nextCode: 6,
     qustionType: 'EI',
+    qustionCode: 1,
     firstType: 'E',
     lastType: 'I',
     questionText: '나에게 더 자주 일어나는 일은?',
@@ -55,6 +60,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 6,
     nextCode: 7,
     qustionType: 'TF',
+    qustionCode: 3,
     firstType: 'T',
     lastType: 'F',
     questionText: '갈등 및 분쟁을 해결하고자 할 때, 나는 주로',
@@ -64,6 +70,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 7,
     nextCode: 8,
     qustionType: 'PJ',
+    qustionCode: 4,
     firstType: 'P',
     lastType: 'J',
     questionText: '생전 처음 해 보는 새로운 메뉴를 요리할 때 나의 모습은?',
@@ -73,6 +80,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 8,
     nextCode: 9,
     qustionType: 'NS',
+    qustionCode: 2,
     firstType: 'N',
     lastType: 'S',
     questionText: '누군가가 자신이 생각해 낸 아이디어라며 이를 소개할 때, 나는',
@@ -82,6 +90,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 9,
     nextCode: 10,
     qustionType: 'TF',
+    qustionCode: 3,
     firstType: 'T',
     lastType: 'F',
     questionText: '나는 둘 중 이렇게 생각한다.',
@@ -91,6 +100,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 10,
     nextCode: 11,
     qustionType: 'PJ',
+    qustionCode: 4,
     firstType: 'P',
     lastType: 'J',
     questionText: '새로운 사람들을 만났을 때,',
@@ -100,6 +110,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 11,
     nextCode: 12,
     qustionType: 'NS',
+    qustionCode: 2,
     firstType: 'N',
     lastType: 'S',
     questionText: '나는 상대방과 대화할 때,',
@@ -109,6 +120,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     code: 12,
     nextCode: 0,
     qustionType: 'EI',
+    qustionCode: 1,
     firstType: 'E',
     lastType: 'I',
     questionText: '월요일 아침부터 회의가 잡혔다.ㅠㅠ 호의 할 때, 당신의 모습은?',
@@ -121,6 +133,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 1,
     questionNextCode: 2,
     qustionType: 'EI',
+    qustionCode: 1,
     answerList: [
       {
         code: 0,
@@ -139,6 +152,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 2,
     questionNextCode: 3,
     qustionType: 'TF',
+    qustionCode: 3,
     answerList: [
       {
         code: 0,
@@ -157,6 +171,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 3,
     questionNextCode: 4,
     qustionType: 'PJ',
+    qustionCode: 4,
     answerList: [
       {
         code: 0,
@@ -175,6 +190,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 4,
     questionNextCode: 5,
     qustionType: 'NS',
+    qustionCode: 2,
     answerList: [
       {
         code: 0,
@@ -193,6 +209,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 5,
     questionNextCode: 6,
     qustionType: 'EI',
+    qustionCode: 1,
     answerList: [
       {
         code: 0,
@@ -211,6 +228,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 6,
     questionNextCode: 7,
     qustionType: 'TF',
+    qustionCode: 3,
     answerList: [
       {
         code: 0,
@@ -229,6 +247,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 7,
     questionNextCode: 8,
     qustionType: 'PJ',
+    qustionCode: 4,
     answerList: [
       {
         code: 0,
@@ -247,6 +266,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 8,
     questionNextCode: 9,
     qustionType: 'NS',
+    qustionCode: 2,
     answerList: [
       {
         code: 0,
@@ -256,7 +276,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
       {
         code: 1,
         type: 'S',
-        text: '아이디어의 실현 가능성을 가장 먼저 본다. 그렇지 않은 아이디어를 들으면 \'여기가 미국인 줄 아냐?\'고 되묻고 싶어진다.',
+        text: '아이디어의 실현 가능성을 가장 먼저 본다. 그렇지 않은 아이디어를 들으면 "여기가 미국인 줄 아냐?"고 되묻고 싶어진다.',
       },
     ],
   },
@@ -265,6 +285,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 9,
     questionNextCode: 10,
     qustionType: 'TF',
+    qustionCode: 3,
     answerList: [
       {
         code: 0,
@@ -283,6 +304,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 10,
     questionNextCode: 11,
     qustionType: 'PJ',
+    qustionCode: 4,
     answerList: [
       {
         code: 0,
@@ -301,6 +323,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 11,
     questionNextCode: 12,
     qustionType: 'NS',
+    qustionCode: 2,
     answerList: [
       {
         code: 0,
@@ -319,6 +342,7 @@ export const mbtiAnswer: MBTIAnswerType[] = [
     questionCode: 12,
     questionNextCode: 0,
     qustionType: 'EI',
+    qustionCode: 1,
     answerList: [
       {
         code: 0,
