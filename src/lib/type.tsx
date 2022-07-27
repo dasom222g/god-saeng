@@ -60,6 +60,7 @@ export interface MBTIQuestionType {
   code: number
   nextCode: number
   qustionType: IndicatorType
+  qustionCode: number
   firstType: CategoryType
   lastType: CategoryType
   questionText: string
@@ -69,6 +70,7 @@ export interface MBTIAnswerType {
   questionCode: number
   questionNextCode: number
   qustionType: IndicatorType
+  qustionCode: number
   answerList: AnswerType[]
 }
 
@@ -81,6 +83,7 @@ type PartialRecord<K extends string | number, T> = { [P in K]?: T }
 // }
 export interface ResultType {
   qustionType: IndicatorType
+  qustionCode: number
   firstType: CategoryType
   lastType: CategoryType
   resultValue: PartialRecord<CategoryType, number>
