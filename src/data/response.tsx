@@ -23,7 +23,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     qustionCode: 3,
     firstType: 'T',
     lastType: 'F',
-    questionText: '난 이 사람의 천재성이 더 탐난다. 나에게 하나가 주어진다면 그의 재능을 택하겠다.',
+    questionText: '나에게 단 하나 주어진다면?',
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     qustionCode: 2,
     firstType: 'N',
     lastType: 'S',
-    questionText: '둘 중 나는 성향은?',
+    questionText: '나는 이럴 때 파티가 더 즐겁다.',
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     qustionCode: 3,
     firstType: 'T',
     lastType: 'F',
-    questionText: '갈등 및 분쟁을 해결하고자 할 때, 나는 주로',
+    questionText: '나만의 갈등과 분쟁 해결 방법은?',
   },
   {
     id: 7,
@@ -233,12 +233,12 @@ export const mbtiAnswer: MBTIAnswerType[] = [
       {
         code: 0,
         type: 'T',
-        text: '정당하고 합리적인 기준이나 원칙에 따른다.',
+        text: '정당,합리적인 기준 원칙적',
       },
       {
         code: 1,
         type: 'F',
-        text: '개인의 상황에 대한 이해와 서로 간의 믿음을 바탕으로, 훈훈하게 그리고 인간적으로 접근한다.         ',
+        text: '서로간의 믿음과 이해의 인간적 방법',
       },
     ],
   },
