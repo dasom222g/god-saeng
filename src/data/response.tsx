@@ -195,12 +195,12 @@ export const mbtiAnswer: MBTIAnswerType[] = [
       {
         code: 0,
         type: 'N',
-        text: '심오하고 이해하기 어려운 것들을 이해할 수 있다.',
+        text: '지적으로 나를 자극하는 대화가 오갈 때',
       },
       {
         code: 1,
         type: 'S',
-        text: '내가 다른 사람들에게 다가가면, 사람들은 쉽게 또는 나보다 더 많이 내게 마음을 연다.',
+        text: '자유롭고 딱딱하지 않은 분위기일 때',
       },
     ],
   },
