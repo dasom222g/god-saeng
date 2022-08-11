@@ -33,7 +33,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     qustionCode: 4,
     firstType: 'P',
     lastType: 'J',
-    questionText: '내가 바라는 미래의 내 모습은 이렇다.',
+    questionText: '미래의 내 모습은?.',
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     qustionCode: 2,
     firstType: 'N',
     lastType: 'S',
-    questionText: '나는 이럴 때 파티가 더 즐겁다.',
+    questionText: '당신이 지금 즐기고 있는 파티의 분위기는?',
   },
   {
     id: 5,
@@ -195,12 +195,12 @@ export const mbtiAnswer: MBTIAnswerType[] = [
       {
         code: 0,
         type: 'N',
-        text: '지적으로 나를 자극하는 대화가 오갈 때',
+        text: '지적으로 나를 자극하는 대화가 오가는 중',
       },
       {
         code: 1,
         type: 'S',
-        text: '자유롭고 딱딱하지 않은 분위기일 때',
+        text: '자유롭고 딱딱하지 않은 분위기',
       },
     ],
   },
