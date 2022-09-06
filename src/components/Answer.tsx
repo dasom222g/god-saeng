@@ -13,7 +13,7 @@ const Answer: FC<AnswerProp> = ({ answer, selectAnswer }) => {
 
   const handleSelect = (selectedItem: AnswerType): void => {
     selectAnswer(selectedItem, answer.qustionType)
-    navigate(answer.questionNextCode ? `/step?pge=${answer.questionNextCode}` : '/result')
+    navigate(answer.questionNextCode ? `/step?page=${answer.questionNextCode}` : '/result')
   }
 
   return (
