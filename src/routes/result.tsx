@@ -18,7 +18,7 @@ const Result: FC = () => {
     setResultMbti(mbti)
   }, [result, setResultMbti])
   // view
-  return <div className="-mb-4 md:-mb-6">Result: {resultMbti}</div>
+  return <div className="-mb-4 md:-mb-6">MBTI: {resultMbti}</div>
 }
 
 export default Result
