@@ -33,7 +33,7 @@ export const mbtiQuestion: MBTIQuestionType[] = [
     qustionCode: 4,
     firstType: 'P',
     lastType: 'J',
-    questionText: '미래의 내 모습은?.',
+    questionText: '미래의 내 모습은?',
   },
   {
     id: 4,
@@ -176,12 +176,12 @@ export const mbtiAnswer: MBTIAnswerType[] = [
       {
         code: 0,
         type: 'J',
-        text: '해당 시점에 내가 할 수 있는, 목표에 맞는 하나의 실행 단계를 수행 중이다.',
+        text: '현재 목표에 맞는 단계를 착실하게 수행 중이다.',
       },
       {
         code: 1,
         type: 'P',
-        text: '유망하거나 안정적인 길이 아니더라도, 또다른 미래를 꿈꿀 수 있다는 선택권에 행복한 고민 중이다.',
+        text: '안정적인 길보다 내가 하고싶은 일을 하고 있다.',
       },
     ],
   },
