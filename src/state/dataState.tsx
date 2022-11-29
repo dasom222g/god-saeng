@@ -10,4 +10,3 @@ export const resultMbtiState = atom<string>({
   key: 'resultMbtiState',
   default: 'ENTJ',
 })
-
