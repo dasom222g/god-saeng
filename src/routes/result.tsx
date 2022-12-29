@@ -6,7 +6,11 @@ const Result: FC = () => {
   const result = useRecoilValue(resultState)
   const [resultMbti, setResultMbti] = useRecoilState(resultMbtiState)
 
+  const handleShare = (): void => {
+    // TODO: 공유하기 구현
+  }
   useEffect(() => {
+    // FIXME: 새로운 함수에 정의하기
     const sortData = [...result].sort((a, b) => a.qustionCode - b.qustionCode)
     const mbti = sortData.reduce(
       (acc, current) =>
@@ -17,8 +21,17 @@ const Result: FC = () => {
     )
     setResultMbti(mbti)
   }, [result, setResultMbti])
+
   // view
-  return <div className="-mb-4 md:-mb-6">MBTI result: {resultMbti}</div>
+  return (
+    <div className="-mb-4 md:-mb-6">
+      <div>MBTI result:{resultMbti}</div>
+      <div>
+        <button type="button" onClick={handleShare}>공유하기</button>
+        <button type="button">다시 테스트하러 가기</button>
+      </div>
+    </div>
+  )
 }
 
 export default Result
