@@ -20,9 +20,11 @@ const Answer: FC<AnswerProp> = ({ answer, selectAnswer }) => {
     <div>
       {answerList.map((item) => (
         <div className="py-2" key={item.code}>
-          <button type="button" className="block w-full" onClick={() => handleSelect(item)}>
-            <span className="block px-4 py-4 bg-white rounded-xl">{item.text}</span>
-          </button>
+          <section>
+            <button type="button" className="block w-full" onClick={() => handleSelect(item)}>
+              <span className="block px-4 py-4 bg-white rounded-xl">{item.text}</span>
+            </button>
+          </section>
         </div>
       ))}
     </div>
