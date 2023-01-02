@@ -27,7 +27,9 @@ const Result: FC = () => {
     <div className="-mb-4 md:-mb-6">
       <div>MBTI result:{resultMbti}</div>
       <div>
-        <button type="button" onClick={handleShare}>공유하기</button>
+        <button type="button" onClick={handleShare}>
+          공유하기
+        </button>
         <button type="button">다시 테스트하러 가기</button>
       </div>
     </div>
