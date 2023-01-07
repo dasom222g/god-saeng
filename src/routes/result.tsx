@@ -19,6 +19,7 @@ const Result: FC = () => {
           : acc + current.lastType,
       '',
     )
+    console.log('🚀 : mbti', mbti)
     setResultMbti(mbti)
   }, [result, setResultMbti])
 
