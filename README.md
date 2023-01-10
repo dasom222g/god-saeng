@@ -24,6 +24,8 @@ Getting start
 
     $ yarn start
 
+## 개발자의 룸 셋업
+
 # Figma
 
 ## Shortcut
