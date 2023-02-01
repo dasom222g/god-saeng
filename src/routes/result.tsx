@@ -31,7 +31,6 @@ const Result: FC = () => {
         <button type="button" onClick={handleShare}>
           공유하기
         </button>
-        <button type="button">다시 테스트하러 가기</button>
       </div>
     </div>
   )
